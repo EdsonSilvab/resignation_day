@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", monospace
+}
+
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap');
+
+.background-ini {
+    position: absolute; 
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url('/src/lib/assets/retrato-inicio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+.dialog-box {
+    background-color: whitesmoke;
+    border: 3px solid #6391db;
+    border-radius: 6px;
+    opacity: 0.96;
+
+    position: relative;
+    bottom: 60px;
+    padding: 2%;
+    margin: 0 10%
+}
+
+#enter-btn {
+    color: grey;
+    opacity: 0.7;
+    font-size: small;
+
+    padding: 3px;
+    position: absolute;
+    right: 10px;
+}
