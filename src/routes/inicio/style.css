@@ -12,7 +12,7 @@
     width: 100%;
     min-height: 100vh;
 
-    background-image: url('/src/lib/assets/retrato-inicio.png');
+    /*background-image: url('/src/lib/assets/retrato-inicio.png');*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,6 +20,11 @@
     display: flex;
     justify-content:center;
     align-items: flex-end;
+
+    transition: background-image 0.8s ease;
+
+    opacity: 0;
+    animation: fadeIn 1.0s ease-in-out both;
 }
 
 .dialog-box {
@@ -31,7 +36,13 @@
     position: relative;
     bottom: 60px;
     padding: 2%;
-    margin: 0 10%
+    margin: 0 10%;
+}
+
+#dialog-text{
+    font-size: medium;
+    color: #17120F;
+    
 }
 
 #enter-btn {

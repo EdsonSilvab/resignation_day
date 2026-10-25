@@ -1,6 +1,7 @@
-
 <script lang="ts">
-   import {ativarMusica} from "../lib/modules/musica"
+    //Musicas
+    import MusicMenu from "../lib/assets/music/music-menu.mp3";
+    import {ativarMusica} from "../lib/modules/musica"
     import SoundBtn from "../lib/assets/icons/sound-btn.png";
     import "./style.css";
 
@@ -13,7 +14,7 @@
         <a href="/sobre">Sobre</a>
     </div>
 
-    <button on:click={ativarMusica}>
-        <img src={SoundBtn} id="sound-btn">
+    <button onclick={() => ativarMusica(MusicMenu, true)} aria-label="AtivarMusica">
+        <img src={SoundBtn} id="sound-btn" alt="Botão de Som">
     </button>
 </div>

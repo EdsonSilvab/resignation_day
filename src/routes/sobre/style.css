@@ -3,19 +3,6 @@
     box-sizing: border-box;
 }
 
-
-
-/* Animação de Intro*/
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 .background-sobre {
     position: absolute; 
     width: 100%;
