@@ -2,8 +2,6 @@
     import "./style.css"
     import {onMount} from "svelte"
     import {goto} from "$app/navigation"
-
-
     
 
     let pararTexto : boolean = $state(false)
@@ -49,4 +47,8 @@
 <div class="background-sobre" onclick={completarTexto}>
     <h1>Sobre</h1>
     <p id="text-sobre">{textoVisivel}</p>
+    <footer>
+        <h3>Criadores</h3>
+        <p>Edson, Patricia, Danilo e Priscila</p>
+    </footer>
 </div>
