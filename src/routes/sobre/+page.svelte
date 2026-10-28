@@ -19,9 +19,9 @@
     onMount(() => {
 
         // Animação do texto
-        for (let i :number = 0; i < sobre.length; i++) {
+        for (let i : number = 0; i < sobre.length; i++) {
             setTimeout(() => {
-                if (pararTexto) return
+                if (pararTexto) return;
                 textoVisivel += sobre[i];
                     
             }, i * 50)
@@ -46,7 +46,7 @@
     
 </script>
 
-<div class="background-sobre" on:click={completarTexto}>
+<div class="background-sobre" onclick={completarTexto}>
     <h1>Sobre</h1>
     <p id="text-sobre">{textoVisivel}</p>
 </div>
