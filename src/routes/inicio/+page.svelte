@@ -8,18 +8,13 @@
     pausarSomDialogo,
     iniciarSom,
     pausarSom,
-  } from "../../lib/modules/musica";
+  } from "../../lib/modules/musica.svelte";
   import ChamadaTelefone from "../../lib/assets/music/chamada-telefone.mp3";
 
   import { onMount } from "svelte";
 
   // transições
   let backgroundCena: string = $state(Retrato1);
-
-  let continuarDialogo: boolean = false;
-
-  let textoVisivel: string = $state("");
-  let enter: string = $state("");
 
   let dialogos = [
     { personagem: "NOLAN", texto: "SÓ MAIS UM POUCO... PROMETO." },
@@ -81,6 +76,12 @@
     { personagem: "NOLAN", texto: "PROMETO." },
   ];
 
+  let continuarDialogo: boolean = false;
+
+  let textoVisivel: string = $state("");
+  let enter: string = $state("");
+
+  
   let personagem: string = $state("");
   let somCelular: HTMLAudioElement | null = null;
 
@@ -146,7 +147,7 @@
   style={`background-image: url('${backgroundCena}')`}
 >
   <div class="dialog-box">
-    <p id="dialog-text"><strong>{personagem}:</strong> {textoVisivel}</p>
+    <p id="dialog-text"><strong id="personagem-name">{personagem}:</strong> {textoVisivel}</p>
     <p id="enter-btn"><strong>{enter}</strong></p>
   </div>
 </div>

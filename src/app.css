@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap');
+
+html {
+    font-family: "Press Start 2P", monospace;
+    
+}
+
+
 /* Animação de intro */
 @keyframes fadeIn {
     from {
@@ -8,9 +16,4 @@
     to {
         opacity: 1;
     }
-}
-
-/* body {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out both;
 }

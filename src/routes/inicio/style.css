@@ -1,11 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: "Press Start 2P", monospace
+    
 }
-
-/*Fonte*/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap');
 
 .background-ini {
     position: absolute; 
@@ -29,8 +26,10 @@
 
 .dialog-box {
     background-color: whitesmoke;
-    border: 3px solid #6391db;
-    border-radius: 6px;
+    border: 2px solid #6391db;
+    border-radius: 8px;
+    box-shadow: 0 12px 12px rgba(99, 145, 219, 0.18);
+    
     opacity: 0.96;
 
     position: relative;
@@ -40,17 +39,21 @@
 }
 
 #dialog-text{
-    font-size: medium;
-    color: #17120F;
+    font-size: 12px;
+    color: #5B6472;
     
 }
 
-#enter-btn {
-    color: grey;
-    opacity: 0.7;
-    font-size: small;
+#personagem-name {
+    color: #17120F;
+}
 
-    padding: 3px;
+#enter-btn {
     position: absolute;
-    right: 10px;
+    right: 30px;
+    color: grey;
+    opacity: 0.5;
+    font-size: 8px;
+    padding-top: 8px;
+    
 }

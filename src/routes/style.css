@@ -3,10 +3,6 @@
     box-sizing: border-box;
 }
 
-/*Fontes*/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap');
-
-
 /* Animação de intro */
 @keyframes fadeIn {
     from {
@@ -47,8 +43,8 @@
 }
 
 a { 
-    padding: 8px;
-    font-size:xx-large;
+    padding: 14px;
+    font-size:20px;
     
     color: whitesmoke;
     font-family: "Press Start 2P", monospace;

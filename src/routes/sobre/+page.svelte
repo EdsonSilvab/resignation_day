@@ -22,7 +22,7 @@
                 if (pararTexto) return;
                 textoVisivel += sobre[i];
                     
-            }, i * 50)
+            }, i * 80)
         }
 
         //Esc pra sair

@@ -1,7 +1,7 @@
 <script lang="ts">
     //Musicas
     import MusicMenu from "../lib/assets/music/music-menu.mp3";
-    import {ativarMusica} from "../lib/modules/musica"
+    import {ativarMusica} from "../lib/modules/musica.svelte"
     import SoundBtn from "../lib/assets/icons/sound-btn.png";
     import "./style.css";
 
