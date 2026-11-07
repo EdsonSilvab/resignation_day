@@ -85,7 +85,7 @@
         let bloquearCima: boolean = false;
         let bloquearBaixo: boolean = false;
 
-        if (ativarDialogo == true || estado.dicas == true) {
+        if (ativarDialogo == true || estado.mostrarDicas == true) {
                 {bloquearDireita = true, bloquearEsquerda = true, bloquearCima = true, bloquearBaixo = true}
         }
 
@@ -93,7 +93,7 @@
         (colisaoPersonagens !== "" && !dialogoIniciado) ||
         (interacoes.bebedouro && estado.curaLiberada) ||
         (interacoes.cafeteira && estado.curaLiberada) ||
-        (interacoes.papel_dicas && !estado.dicas)
+        (interacoes.papel_dicas && !estado.mostrarDicas)
 
         for (let i: number = 0; i < colisaoObj.length; i++) {
             let colidiu: string = colisaoObjetos(colisaoObj[i], playerDiv);
@@ -113,8 +113,8 @@
             }
 
             if (i == 17) {
-                if (interacoes.papel_dicas = colidiu != "" && !estado.dicas && !interagir) {papelDicas.style.filter = "brightness(1.2)"}
-                else if(interacoes.papel_dicas = colidiu != "" && !estado.dicas) {papelDicas.style.filter = "brightness(0.6)"}
+                if (interacoes.papel_dicas = colidiu != "" && !estado.mostrarDicas && !interagir) {papelDicas.style.filter = "brightness(1.2)"}
+                else if(interacoes.papel_dicas = colidiu != "" && !estado.mostrarDicas) {papelDicas.style.filter = "brightness(0.6)"}
                 else {papelDicas.style.filter = "brightness(1)"}
             }
 
@@ -290,7 +290,7 @@
 </script>
 
 
-{#if estado.dicas}
+{#if estado.mostrarDicas}
 <div class="dicas"><img id="dica-img" src="{ImgDicas}" alt="Dicas"></div>
 {/if}
 

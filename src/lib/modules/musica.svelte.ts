@@ -2,32 +2,25 @@ import SoundDialog from "../assets/music/dialog-sound.mp3"
 
 // Musicas
 let musica: HTMLAudioElement;
-let musicaOn : boolean = false;
-
-export async function ativarMusica(music : string, loop : boolean = false,): Promise<void>{
+export function ativarMusica(music : string, loop : boolean = false): void{
     if (!musica) {
         musica = new Audio(music);
         musica.loop = loop;
         musica.volume = 0.7
-       
-    }
 
-    if (!musicaOn) {
         musica.play();
-        musicaOn = true;
-        console.log("Música ativada!");
-    } else {
+       
+    } else if (musica.paused) {
+        musica.play()
+    }
+    else {
         musica.pause();
-        musicaOn = false;
-        console.log("Música pausada!");
     }
 }
 
-
 // Som do dialogo
-let sound : HTMLAudioElement | null = null;
-let soundOn : boolean = false
-export async function iniciarSomDialogo(): Promise<void> {
+let sound : HTMLAudioElement;
+export function iniciarSomDialogo(): void {
     if (!sound) {
         sound = new Audio(SoundDialog);
     }
@@ -35,19 +28,18 @@ export async function iniciarSomDialogo(): Promise<void> {
     if (!sound.paused) return
 
     sound.play();
-    soundOn = true
+
 }
 
 export function pausarSomDialogo(): void {
     if (sound) {
         sound.pause();
         sound.currentTime = 0
-        soundOn = false
     }
     
 }
 
-
+//Sons em geral
 export function iniciarSom(som: string, loop: boolean = false
 ): HTMLAudioElement {
     const audio = new Audio(som);

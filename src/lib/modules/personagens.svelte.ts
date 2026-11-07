@@ -1,5 +1,5 @@
 export class Personagens {
-  vida: number = $state(67);
+  vida: number = $state(100);
   velocidade: number = 3;
   positionX: number = 0;
   positionY: number = 0;
@@ -18,6 +18,7 @@ export class Personagens {
 }
 
 export class Player extends Personagens {
+  vida: number = $state(67);
   positionX: number = 180;
   positionY: number = 160;
 }
@@ -30,3 +31,4 @@ export class Funcionario extends Personagens {
 
 
 export const player = new Player
+export const oliver = new Funcionario

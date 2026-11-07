@@ -5,7 +5,7 @@ import { player } from "./personagens.svelte"
 // Estados
 export const estado = $state({
   curaLiberada: true,
-  dicas: false
+  mostrarDicas: false
 })
 
 export const interacoes = {
@@ -38,11 +38,11 @@ export function verificarInteracoes() {
   }
 
   // Interação de dicas
-  if (interacoes.papel_dicas && buttonE && !estado.dicas) {
-    estado.dicas = true
-    console.log(estado.dicas)
-  } else if (estado.dicas && buttonEsc) {
-    estado.dicas = false
+  if (interacoes.papel_dicas && buttonE && !estado.mostrarDicas) {
+    estado.mostrarDicas = true
+    console.log(estado.mostrarDicas)
+  } else if (estado.mostrarDicas && buttonEsc) {
+    estado.mostrarDicas = false
   }
   // sair das dicas
 }
