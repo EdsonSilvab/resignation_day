@@ -2,6 +2,7 @@
     import "./style.css"
     import {onMount} from "svelte"
     import {goto} from "$app/navigation"
+    import logoIFPE from "../../lib/assets/logoIFPE.png"
     
 
     let pararTexto : boolean = $state(false)
@@ -50,5 +51,6 @@
     <footer>
         <h3>Criadores</h3>
         <p>Edson, Patricia, Danilo e Priscila</p>
+        <img src={logoIFPE}>
     </footer>
 </div>

@@ -33,6 +33,11 @@
 
 }
 
+.background-sobre h1 {
+    position: absolute;
+    top: 22%;
+}
+
 #text-sobre {
     font-size: small;
     padding: 2% 13%;
@@ -56,4 +61,10 @@ footer {
     padding: 5px;
     bottom: -20px;
     margin: 7%;
+
+    align-items: center;
+}
+
+footer img {
+    width: 70px;
 }
