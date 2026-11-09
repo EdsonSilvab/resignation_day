@@ -30,8 +30,9 @@
     let ativarDialogo : boolean = $state(false)
 
 
-    //animação
-    let animationFrame : number
+    //animacao
+    let animationPlayer : number
+    let animationFuncionario : number
 
     //dialogo
    
@@ -160,7 +161,7 @@
         playerDiv.style.top = player.positionY + 'px';
         
 
-        animationFrame = requestAnimationFrame(moverPlayer) // loop da função
+        animationPlayer = requestAnimationFrame(moverPlayer)
     }
 
     // Funcionario
@@ -231,7 +232,7 @@
         funcionarioDiv.style.left = funcionario.positionX + 'px';
         funcionarioDiv.style.top = funcionario.positionY + 'px';
 
-        animationFrame = requestAnimationFrame(moverFuncionarios)
+        animationFuncionario = requestAnimationFrame(moverFuncionarios)
     }
     
     async function iniciarDialogos() {
@@ -276,14 +277,15 @@
         window.addEventListener("keydown", pressionarEnter)
         window.addEventListener("keydown", Input.pressionar)
         window.addEventListener("keyup", Input.soltar)
-        animationFrame = requestAnimationFrame(moverPlayer)
-        animationFrame = requestAnimationFrame(moverFuncionarios) // ciclo da animação no componente
+        animationPlayer = requestAnimationFrame(moverPlayer)
+        animationFuncionario = requestAnimationFrame(moverFuncionarios) // ciclo da animação no componente
         
 
         return () => {
            window.removeEventListener("keydown", Input.pressionar)
            window.removeEventListener("keyup", Input.soltar)
-           cancelAnimationFrame(animationFrame)
+           cancelAnimationFrame(animationPlayer)
+cancelAnimationFrame(animationFuncionario)
         }
     })
 
